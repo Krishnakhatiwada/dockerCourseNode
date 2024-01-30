@@ -1,0 +1,32 @@
+name: nodejs-running 
+run-name: testing nodejs-running
+on: 
+  push:
+    branches:
+      - main
+
+jobs: 
+  testing-node: 
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./all_in_docker/client
+
+    steps: 
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+      - name: installing node
+        run : npm install 
+
+      - name: running npm 
+        run : npm start
+
+
+
+  
