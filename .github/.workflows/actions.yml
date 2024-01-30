@@ -1,0 +1,26 @@
+name: nodejs-running 
+run-name: testing nodejs-running
+on: 
+  push:
+    branches:
+      - main
+
+jobs: 
+  testing-node: 
+    runs-on: ubuntu-latest
+
+  steps: 
+    - name: specifying directories
+    - run:  
+        working-directory: ./all_in_docker/client
+
+    - name: installing node
+    - node-version: '14'
+    - run : npm install
+
+    - name: running npm 
+    - run: npm run build
+
+
+
+  
