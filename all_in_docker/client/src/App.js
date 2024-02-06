@@ -110,10 +110,10 @@ function App() {
             setWage(event.target.value);
           }}
         />
-        <button onClick={addEmployee}>Add Employee</button>
+        <button onClick={addEmployee}>Add New Employee</button>
       </div>
       <div className="employees">
-        <button onClick={getEmployees}>Show Employees</button>
+        <button onClick={getEmployees}>Show Added Employees</button>
 
         {employeeList.map((val, key) => {
           return (
