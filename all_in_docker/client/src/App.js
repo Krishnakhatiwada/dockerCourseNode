@@ -113,8 +113,7 @@ function App() {
         <button onClick={addEmployee}>Add New Employee</button>
       </div>
       <div className="employees">
-        <button onClick={getEmployees}>Show New Employees</button>
-
+        
         {employeeList.map((val, key) => {
           return (
             <div className="employee">
