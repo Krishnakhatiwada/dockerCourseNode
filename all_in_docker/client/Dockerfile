@@ -1,6 +1,6 @@
 FROM node:14-alpine as builder
-WORKDIR /app
 COPY . .
+WORKDIR /app
 RUN npm install
 RUN npm run-script build
 
